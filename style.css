@@ -41,8 +41,8 @@ body {
 
 .lang {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -62,14 +62,15 @@ body {
   /* .logo {
     width: 85px;
   } */
-  .logo img{
+  .logo img {
     width: 120px;
     padding-top: 2px;
-  } 
+  }
 
   .arrow {
     display: none;
   }
+
 }
 
 .langua {
@@ -121,7 +122,7 @@ nav {
 }
 
 .btn button:nth-child(2) {
-  background: white;
+  background: #ffffffd9;
   border: 0.5px solid white;
   color: black;
   font-size: 16px;
@@ -136,7 +137,7 @@ nav {
   border: none;
   color: white;
   appearance: none;
-  padding: 0px 18px;
+  padding: 0px 13px;
   cursor: pointer;
 }
 
@@ -186,10 +187,11 @@ nav {
   backdrop-filter: blur(12px);
 }
 
-@media only screen and (max-width: 630px){
-  .tab{
+@media only screen and (max-width: 630px) {
+  .tab {
     width: 89%;
   }
+
 }
 
 .cont:hover {
@@ -200,21 +202,74 @@ nav {
 
 .box {
   position: relative;
-  height: 100%;
-  background-image: url("assets/images/main\ image.jpg");
-  border: 2px solid white;
-  border-radius: 12px;
+  height: auto;
+  /* background-image: url("assets/images/main\ image.jpg"); */
+  mask-image: linear-gradient(
+    180deg,
+    #fff 71.48%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  /* border-radius: 16px; */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin: 148px 35px;
+  /* clip-path: ellipse(30% at 100%); */
+ 
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.80) 64.5%);
   background-size: cover;
-  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.40) 64.5%); */
+  /* border-radius: 0 0 50% 50%; */
+
+ 
 }
 
-@media (min-width: 1280px) {
-  .default-ltr-cache-1jlv5t9 {
+/* add in .box for fading border */
+  /* background-color: #f9f9f9; */
+  /* background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.817) 50%, rgba(0, 0, 0, 0) 100%); */
+  /* padding-top: 2px; */
+  /* padding-left: 2px; */
+  /* background-position: top left; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% 4px; */
+  /* z-index: 1 ; */
+ 
+/* for concave curve in bottom of box div 
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"%3E%3Cpath d="M0,20 Q50,-10 100,20" fill="none" stroke="black" stroke-width="2" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: bottom;
+   */
+
+
+.box img {
+  /* position: relative; */
+  /* z-index: -1; */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+/* @media (min-width: 680px) {
+  .box {
     background-image: linear-gradient(
       360deg,
       rgba(0, 0, 0, 0.9) 31.45%,
       rgba(0, 0, 0, 0.4) 82.5%
     );
   }
-}
+} */
+
+
+/* no need to use now if height is auto-- needed only if kept box height to 100% */
+/* @media only screen and (max-width: 600px){
+  .box{
+    height: auto;
+  }
+} */
