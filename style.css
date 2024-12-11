@@ -5,6 +5,7 @@
 
 body {
   background-color: black;
+  /* height: 100%; */
 }
 .container {
   background-image: url("assets/images/IN-en-20241202-TRIFECTA-perspective_052fb757-35ce-4655-946e-3c9ffac95fd0_large.jpg");
@@ -20,7 +21,7 @@ body {
   background: linear-gradient(#1e1e1e, #361c24, #2c040e, #272224);
   filter: blur(1px);
   opacity: 0.98;
-  position: absolute;
+  position: fixed;
   /* z-index: -1; */
 }
 
@@ -29,35 +30,61 @@ body {
   padding: 28px 0px;
   padding-left: 46px;
   opacity: 0.89;
-  width: 136px;
+  /* width: 136px; */
   /* z-index: 1; */
+}
+
+.logo img {
   transition: width 0.5s ease;
+  width: 132px;
 }
 
 .lang {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
   /* body {
        background-color: red; 
     } */
+
+  .langua img {
+    padding-top: 2px;
+  }
+
   .lang {
     display: none;
     /* padding: 333px; */
   }
 
-  .logo {
+  /* .logo {
     width: 85px;
+  } */
+  .logo img{
+    width: 120px;
+    padding-top: 2px;
+  } 
+
+  .arrow {
+    display: none;
   }
 }
 
+.langua {
+}
 
-.fixed{
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    margin: auto;
+.langua img {
+  width: 19px;
+  filter: invert();
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  margin: auto;
 }
 
 nav {
@@ -80,7 +107,7 @@ nav {
 }
 
 .btn button:first-child {
-  background: transparent;
+  background: #1f1418db;
   border: 0.5px solid white;
   color: white;
   font-size: 16px;
@@ -89,6 +116,7 @@ nav {
   padding: 4px 17px;
   border-radius: 25px;
   display: flex;
+  align-items: center;
   gap: 0px;
 }
 
@@ -121,59 +149,72 @@ nav {
   padding: 0px 12px;
 }
 
-.arrow {
+.arrow img {
+  display: block;
   cursor: pointer;
+  width: 19px;
+  filter: invert();
 }
 
-
-.center{
-    display: flex;
-    justify-content: center;
+.center {
+  display: flex;
+  justify-content: center;
 }
 
-.tab{
-    /* width: 23px; */
+.tab {
+  width: auto;
   color: #cbc6c6;
   border: none;
-  border-radius: 23px;
-  background-color: black;
+  /* border-radius: 23px; */
+  /* background-color: black; */
   position: fixed;
   z-index: 1;
-  width: 40%;
-  padding: 12px 0px;
+  /* width: 40%; */
+  padding: 10px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   margin: 90px;
-  /* font-size: large; */
+  font-size: medium;
   font-family: sans-serif;
-  font-weight: 500;
+  /* font-weight: 500; */
+
+  border-radius: 6.25rem;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
 }
 
-
-.cont:hover{
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+@media only screen and (max-width: 630px){
+  .tab{
+    width: 89%;
+  }
 }
 
-.box{
+.cont:hover {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    position: relative;
-    height: 100%;
-    background-image: url("assets/images/IN-en-20241202-TRIFECTA-perspective_052fb757-35ce-4655-946e-3c9ffac95fd0_large.jpg");
-    border: 2px solid white;
-    border-radius: 12px;
-    margin: 148px 35px;
-    background-size: cover;
-    /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.40) 64.5%); */
+.box {
+  position: relative;
+  height: 100%;
+  background-image: url("assets/images/main\ image.jpg");
+  border: 2px solid white;
+  border-radius: 12px;
+  margin: 148px 35px;
+  background-size: cover;
+  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.40) 64.5%); */
 }
 
 @media (min-width: 1280px) {
-    .default-ltr-cache-1jlv5t9 {
-        background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.90) 31.45%, rgba(0, 0, 0, 0.40) 82.5%);
-    }
+  .default-ltr-cache-1jlv5t9 {
+    background-image: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.9) 31.45%,
+      rgba(0, 0, 0, 0.4) 82.5%
+    );
+  }
 }
-
-
