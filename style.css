@@ -70,7 +70,6 @@ body {
   .arrow {
     display: none;
   }
-
 }
 
 .langua {
@@ -119,6 +118,10 @@ nav {
   display: flex;
   align-items: center;
   gap: 0px;
+}
+
+.btn button:first-child:focus {
+  border: 5px solid white;
 }
 
 .btn button:nth-child(2) {
@@ -191,7 +194,6 @@ nav {
   .tab {
     width: 89%;
   }
-
 }
 
 .cont:hover {
@@ -202,7 +204,7 @@ nav {
 
 .box {
   position: relative;
-  height: auto;
+  height: 94vh;
   /* background-image: url("assets/images/main\ image.jpg"); */
   mask-image: linear-gradient(
     180deg,
@@ -216,32 +218,34 @@ nav {
   border-bottom-right-radius: 16px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin: 148px 35px;
+  margin: 148px 38px;
+  margin-bottom: 0px;
   /* clip-path: ellipse(30% at 100%); */
- 
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.80) 64.5%);
+
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 29.25%,
+    rgba(0, 0, 0, 0.8) 64.5%
+  );
   background-size: cover;
   /* border-radius: 0 0 50% 50%; */
-
- 
 }
 
 /* add in .box for fading border */
-  /* background-color: #f9f9f9; */
-  /* background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.817) 50%, rgba(0, 0, 0, 0) 100%); */
-  /* padding-top: 2px; */
-  /* padding-left: 2px; */
-  /* background-position: top left; */
-  /* background-repeat: no-repeat; */
-  /* background-size: 100% 4px; */
-  /* z-index: 1 ; */
- 
+/* background-color: #f9f9f9; */
+/* background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.817) 50%, rgba(0, 0, 0, 0) 100%); */
+/* padding-top: 2px; */
+/* padding-left: 2px; */
+/* background-position: top left; */
+/* background-repeat: no-repeat; */
+/* background-size: 100% 4px; */
+/* z-index: 1 ; */
+
 /* for concave curve in bottom of box div 
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"%3E%3Cpath d="M0,20 Q50,-10 100,20" fill="none" stroke="black" stroke-width="2" /%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: bottom;
    */
-
 
 .box img {
   /* position: relative; */
@@ -251,7 +255,23 @@ nav {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
-  opacity: 0.5;
+  /* opacity: 0.28; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.2) 80%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.2) 80%,
+    rgba(0, 0, 0, 0.1) 100%
+  ); /*for safari support2*/
   width: 100%;
   height: 100%;
 }
@@ -266,10 +286,117 @@ nav {
   }
 } */
 
-
 /* no need to use now if height is auto-- needed only if kept box height to 100% */
 /* @media only screen and (max-width: 600px){
   .box{
     height: auto;
   }
 } */
+
+/* no the above is not true and below is needed to completely match */
+@media only screen and (max-width: 600px) {
+  .box {
+    height: 37%;
+  }
+
+  .box img {
+    object-fit: cover;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 65%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  color: white;
+  text-align: center;
+  /* font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif; */
+  font-family: Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  /* gap: 18px; */
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gap-18 {
+  gap: 18px;
+}
+
+.content h1 {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 70px;
+  filter: brightness(10px);
+}
+
+.content p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    transform: translate(-50%, -5%);
+    width: 80%;
+  }
+
+  .content h1 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: normal;
+  }
+
+  .content p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+/* 
+.curve {
+  height: 4vh;
+  width: 93vw;
+  margin: auto;
+  position: relative;
+  bottom: 166px;
+  border-top: 2px solid white;
+  border-radius: 50% 50% 0% 0%;
+
+  height: 215px;
+    width: 100vw;
+    position: relative;
+    top: 306px;
+    border-top: 3px solid white;
+    border-radius: 50% 50% 0% 0%;
+} */
+
+.text {
+  text-align: center;
+  color: white;
+  position: relative;
+  margin: 12px 0px;
+}
+
+.text h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+
