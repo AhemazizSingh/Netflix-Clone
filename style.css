@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
 }
 
 body {
@@ -19,7 +19,8 @@ body {
 .bg {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(#1e1e1e, #361c24, #200208, #151213);
+  /* background: linear-gradient(#1e1e1e, #361c24, #200208, #151213); */
+  background: linear-gradient(#1e1e1e, #1b0e12, #0c0104, #1b1618);
   filter: blur(1px);
   opacity: 0.98;
   position: fixed;
@@ -255,6 +256,36 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom;
    */
+
+/* for curve */
+/* 
+   @media (min-width: 600px) {
+    .default-ltr-cache-1f97ztc {
+        width: 180%;
+        left: -40%;
+    }
+} */
+/* box-sizing: border-box;
+   position: absolute;
+   height: 100%;
+   top: 0;
+   margin: auto;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex
+;
+   -webkit-align-items: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   border: solid .25rem transparent;
+   border-top-left-radius: 50% 100%;
+   border-top-right-radius: 50% 100%;
+   border-bottom: none;
+   background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+   -webkit-background-clip: padding-box;
+   background-clip: padding-box; */
 
 .box img {
   /* position: relative; */
@@ -574,6 +605,7 @@ nav {
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
+  transition: font-size 0.3s ease;
 }
 
 .opt-btn {
@@ -586,6 +618,7 @@ nav {
   font-weight: 400;
   color: rgb(255, 255, 255);
   fill: white;
+  transition: margin 0.3s ease;
 }
 
 .opt-btn select {
@@ -633,23 +666,102 @@ nav {
 } */
 @media (max-width: 800px) {
   .text h2 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
 }
 
-
 @media only screen and (max-width: 800px) {
   .opt-btn {
     flex-direction: column;
-    margin: 0px 20px;
+    margin: 0px 50px;
   }
 
-  .opt-btn select{
-    font-size: 14px;
+  .opt-btn select {
+    font-size: 15px;
   }
 
   .text {
-    margin-left: 20px;
+    margin-left: 50px;
   }
 }
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 95%;
+  margin: 24px 60px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap scrolling */
+  scrollbar-width: none; /* Hide scrollbar (Firefox) */
+  -ms-overflow-style: none; /* Hide scrollbar (IE/Edge) */
+  cursor: grab;
+}
+
+.carousel-img {
+  display: flex;
+  gap: 44px;
+}
+
+/* .fade {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  border: 2px solid purple;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0) 50%,
+    rgb(207, 0, 0) 100%
+  );
+} */
+
+.carousel-img img {
+  width: 20%;
+  border: 0px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  user-select: none;
+  pointer-events: none;
+  transition: width 0.5s ease;
+}
+
+@media only screen and (max-width: 700px) {
+  .carousel-img img {
+    width: 30%;
+  }
+}
+
+/* for fading effect while scrolling */
+/* .carousel.active {
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0));
+} */
+
+/* Default state without scroll */
+/* .carousel:not(.active) {
+  background: transparent;
+} */
+
+/* for overflow faded */
+/* .carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;  Width of the fade effect 
+  pointer-events: none;  Allows interactions to pass through 
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.carousel::before {
+  left: 0;
+} */
