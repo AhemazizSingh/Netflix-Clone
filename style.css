@@ -679,6 +679,7 @@ nav {
   .opt-btn {
     flex-direction: column;
     margin: 0px 50px;
+    margin-right: 34px;
   }
 
   .opt-btn select {
@@ -722,7 +723,13 @@ nav {
   );
 } */
 
+/* .img-cont{
+  position: relative;
+  flex: 0 0 21%;
+} */
+
 .carousel-img img {
+  /* position: relative; */
   width: 20%;
   border: 0px;
   border-radius: 10px;
@@ -733,9 +740,40 @@ nav {
 }
 
 @media only screen and (max-width: 700px) {
+  .carousel-img {
+    gap: 20px;
+  }
+
+  .carousel {
+    margin-left: 50px;
+    width: 85%;
+  }
+
   .carousel-img img {
     width: 30%;
   }
+
+  /* .img-cont{
+    flex: 0 0 25%;
+  } */
+}
+@media only screen and (max-width: 500px) {
+  .carousel {
+    width: 82%;
+  }
+}
+
+.img-num {
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  /* padding: 4px 0px; */
+  border-radius: 4px;
+  z-index: 1;
 }
 
 /* for fading effect while scrolling */
@@ -768,4 +806,20 @@ nav {
 
 .carousel::before {
   left: 0;
+} */
+
+/* .num {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  gap: 222px;
+  background: red;
+  height: 100px;
+  width: 100%;
+}
+
+.num span{
+  color: white;
+  font-size: 120px;
+  font-weight: 500;
 } */
