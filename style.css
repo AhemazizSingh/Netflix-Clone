@@ -841,7 +841,7 @@ nav {
   transition: font-size 0.5s ease;
 }
 
-.carousel-cont {
+.card-cont {
   position: relative;
   /* width: 85%; */
   width: auto;
@@ -855,7 +855,7 @@ nav {
   /* transition: all 0.5s ease; */
 }
 
-.cont1 {
+.card {
   padding: 16px 24px;
   border: 0px;
   border-radius: 30px;
@@ -866,11 +866,11 @@ nav {
   /* transition: transform 0.5s ease, opacity 0.5s ease; */
 }
 
-.cont1 img {
+.card img {
   height: 100px;
 }
 
-.cont1 h3 {
+.card h3 {
   margin-top: 24px;
   font-size: 1.5rem;
   line-height: normal;
@@ -879,7 +879,7 @@ nav {
   transition: font-size 0.5s ease;
 }
 
-.cont1 p {
+.card p {
   color: rgba(255, 255, 255, 0.7);
   margin: 15px 0px;
   margin-bottom: 24px;
@@ -887,7 +887,7 @@ nav {
   font-weight: 400;
 }
 
-.cont1 img {
+.card img {
   /* float: right; */
   align-self: end;
   justify-self: end;
@@ -896,28 +896,70 @@ nav {
   /* height: 100px; */
 }
 
-@media only screen and (max-width:900px){
-  .carousel-cont{
+@media only screen and (max-width: 900px) {
+  .card-cont {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     row-gap: 24px;
   }
 }
 
-@media only screen and (max-width:550px){
-  .carousel-cont{
+@media only screen and (max-width: 550px) {
+  .card-cont {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 24px;
   }
 }
 
-@media only screen and (max-width:700px){
-  .head h2{
+@media only screen and (max-width: 800px) {
+  .head h2 {
     font-size: 1.125rem;
   }
 
-  .cont1 h3{
+  .card h3 {
     font-size: 1.25rem;
+  }
+}
+
+.faq {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 12px;
+  margin: 24px 0px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-cont {
+  color: white;
+  border: 0px;
+  border-radius: 15px;
+  background: rgb(70 65 65 / 70%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.faq-cont:hover {
+  background: rgb(105 99 99 / 70%);
+  cursor: pointer;
+}
+
+.faq-cont h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  transition: font-size 0.5s ease;
+}
+/* .faq-cont h2:hover {
+  cursor: pointer;
+} */
+
+@media only screen and (max-width: 850px) {
+  .faq-cont h2 {
+    font-size: 1.125rem;
   }
 }
