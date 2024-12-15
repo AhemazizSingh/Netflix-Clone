@@ -135,6 +135,7 @@ nav {
   padding: 4px 13px;
   border-radius: 25px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .lang select {
@@ -203,6 +204,8 @@ nav {
 @media only screen and (max-width: 630px) {
   .tab {
     width: 89%;
+    /* ## */
+    margin-right: 120px;
   }
 }
 
@@ -339,6 +342,8 @@ nav {
 @media only screen and (max-width: 560px) {
   .box {
     height: 37%;
+    /* ## */
+    margin-right: 67px;
   }
 
   .box img {
@@ -392,7 +397,7 @@ nav {
 
 @media only screen and (max-width: 560px) {
   .content {
-    transform: translate(-50%, -5%);
+    transform: translate(-50%, -50%);
     width: 80%;
   }
 
@@ -1072,20 +1077,24 @@ footer p a {
 
 .footer-btn {
   justify-content: flex-start;
-  margin: 52px 0px;
+  margin: 0;
+  margin-top: 52px;
   padding: 0;
 }
 
-.footer-btn button:first-child{
+.footer-btn button:first-child {
   border-radius: 12px;
 }
 
-@media only screen and (max-width:600px) {
-  .footer-btn .lang, .footer-btn .arrow{
+@media only screen and (max-width: 600px) {
+  .footer-btn .lang,
+  .footer-btn .arrow {
     display: block;
   }
 }
 
-.end{
+.end {
   margin: 0;
+  margin-top: 24px;
+  padding-bottom: 12px;
 }
