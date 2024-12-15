@@ -987,12 +987,37 @@ nav {
   border-radius: 12px;
 }
 
-#eeb{
-  /* width: 20%; */
-}
+
+
 #eeb button{
   font-size: 24px;
   font-weight: 500;
   /* line-height: 24px; */
   border-radius: 12px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width:950px){
+  #ee{
+    margin: 0px 24px;
+  }
+  #eei{
+    width: 100%;
+  }
+} 
+
+/* to change the flex direction to column but not needed because email class already does this */
+/* but the gap needs to be changed */
+@media only screen and (max-width:500px){
+  #et{
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  #ee{
+    gap: 14px;
+  }
+
+  #eeb{
+    align-self: flex-start;
+  }
 }
